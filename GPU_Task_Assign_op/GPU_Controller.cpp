@@ -87,14 +87,16 @@ public:
                     GPU_assign[pair_id*2+1]=1;
                     task_cnt+=2;
                 }else{
-                    gpu1->update(0.0);
-                    gpu2->update(0.0);
+                    //gpu1->update(0.0);
+                    //gpu2->update(0.0);
                     GPU_assign[pair_id*2]=0;
                     GPU_assign[pair_id*2+1]=0;
                 }
             }else{
-                gpu1->update(0.0);
-                gpu2->update(0.0);
+                if (gpu1->f_ready && gpu2->f_ready) {
+                    gpu1->update(0.0);
+                    gpu2->update(0.0);
+                }
                 GPU_assign[pair_id*2]=0;
                 GPU_assign[pair_id*2+1]=0;
             }
