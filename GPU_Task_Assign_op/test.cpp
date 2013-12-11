@@ -15,7 +15,7 @@
 using namespace std;
 
 const int TEST_VECTOR_ID = 0;
-const int DURATION_SIZE = 10000;
+const int DURATION_SIZE = 20000;
 // 0: all 1,
 // 1: random
 // 2: all 0.75
